@@ -93,7 +93,7 @@ This portfolio is specifically designed for **college admissions reviewers** wit
    ```bash
    # Check Python QA
    make ci-local
-   
+
    # Check Node.js build
    pnpm -s lint && pnpm -s build
    ```
@@ -127,7 +127,7 @@ process:
 descriptionShort: "Brief 1-2 sentence description for cards"
 ---
 
-Write a longer description here (120-180 words) describing the concept, 
+Write a longer description here (120-180 words) describing the concept,
 intent, creative constraints, process, and outcome of this work.
 ```
 

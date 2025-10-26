@@ -1,0 +1,11 @@
+[MASTER]
+ignore=venv,node_modules,.next
+
+[MESSAGES CONTROL]
+disable=C0114,C0115,C0116  ; allow missing docstrings during bootstrap
+
+[REPORTS]
+score=yes
+
+[FORMAT]
+max-line-length=100
