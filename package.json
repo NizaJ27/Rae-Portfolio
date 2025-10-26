@@ -1,0 +1,42 @@
+{
+  "name": "raegans_portfolio",
+  "version": "1.0.0",
+  "description": "A fast, accessible, image-first artist portfolio site built with Next.js and MDX, featuring a tabbed landing page and strict Python QA gates ensuring 100% test coverage throughout development.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NizaJ27/Rae-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NizaJ27/Rae-Portfolio/issues"
+  },
+  "homepage": "https://github.com/NizaJ27/Rae-Portfolio#readme",
+  "dependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.16",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^16.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16"
+  }
+}
