@@ -9,17 +9,16 @@ This portfolio is specifically designed for **college admissions reviewers** wit
 - **Print-friendly admissions view** for reviewers with curated works
 
 ### 🚀 Development Progress
-- **Phase 1 (Foundation & QA Setup)**: 1/1 steps complete
+- **Phase 1 (Foundation & QA Setup)**: 1/1 steps complete ✅
   - ✅ **Step 0**: Python QA harness initialized (100% coverage, pylint 10.0)
-- **Phase 2 (Next.js Foundation)**: 0/3 steps complete
+- **Phase 2 (Next.js Foundation)**: 1/3 steps complete
+  - ✅ **Step 1**: Next.js scaffolded with TypeScript and Tailwind
 - **Phase 3 (Content Pipeline)**: 0/3 steps complete
 - **Phase 4 (Core Features)**: 0/5 steps complete
 - **Phase 5 (SEO & Performance)**: 0/4 steps complete
 - **Phase 6 (Advanced Tabbed Landing)**: 0/7 steps complete
 
-**Overall Progress**: 1/23 steps complete (4.3%)
-
-### Key Features
+**Overall Progress**: 2/23 steps complete (8.7%)### Key Features
 - ✨ **Tabbed Landing Page** - Switch between categories without page reloads
 - 🖼️ **Accessible Lightbox** - Full keyboard navigation and screen reader support
 - 📱 **Responsive Design** - Optimized for all devices and print
@@ -31,7 +30,7 @@ This portfolio is specifically designed for **college admissions reviewers** wit
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- Next.js 14+ (App Router)
+- Next.js 16+ (App Router)
 - TypeScript
 - Tailwind CSS
 - Framer Motion (respects `prefers-reduced-motion`)
@@ -78,7 +77,7 @@ This portfolio is specifically designed for **college admissions reviewers** wit
 ### Prerequisites
 - Node.js 20+
 - Python 3.11+
-- pnpm (recommended) or npm
+- npm (included with Node.js)
 
 ### Installation
 
@@ -86,27 +85,28 @@ This portfolio is specifically designed for **college admissions reviewers** wit
    ```bash
    git clone <repository-url>
    cd Raegans_Portfolio
-   corepack enable
-   pnpm install
+   npm install
    ```
 
 2. **Set up Python QA environment:**
    ```bash
-   python -m pip install -r tools/requirements.txt
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install -r tools/requirements.txt
    ```
 
 3. **Run development server:**
    ```bash
-   pnpm dev
+   npm run dev
    ```
 
 4. **Verify setup:**
    ```bash
-   # Check Python QA
-   make ci-local
+   # Check Python QA (activate environment first)
+   source .venv/bin/activate && make ci-local
 
    # Check Node.js build
-   pnpm -s lint && pnpm -s build
+   npm run lint && npm run build
    ```
 
 ## 📝 Content Management
@@ -183,20 +183,20 @@ pylint --fail-under=10.0 tools   # Code quality check
 pytest                          # Run tests with coverage
 
 # Node.js checks
-pnpm -s lint                    # ESLint
-pnpm -s build                   # Production build test
-pnpm typecheck                  # TypeScript validation
+npm run lint                    # TypeScript validation
+npm run build                   # Production build test
+npm run typecheck               # TypeScript validation
 
 # Development
-pnpm dev                        # Start dev server
-pnpm test                       # Run any Node.js tests
+npm run dev                     # Start dev server
+npm test                        # Run any Node.js tests
 ```
 
 ### Quality Gates
 Every commit must pass:
 1. ✅ `pylint --fail-under=10.0 tools`
 2. ✅ `pytest -q --cov=tools --cov-report=term-missing --cov-fail-under=100`
-3. ✅ `pnpm -s lint && pnpm -s build`
+3. ✅ `npm run lint && npm run build`
 
 ## ♿ Accessibility Features
 
@@ -245,14 +245,14 @@ Every commit must pass:
 
 ### Vercel (Recommended)
 1. Connect repository to Vercel
-2. Set build command: `pnpm build`
+2. Set build command: `npm run build`
 3. Set output directory: `.next`
 4. Deploy automatically on push to main
 
 ### Manual Deployment
 ```bash
-pnpm build
-pnpm export  # If using static export
+npm run build
+npm run export  # If using static export
 ```
 
 ## 📋 Development Checklist
@@ -267,10 +267,10 @@ pnpm export  # If using static export
   - [x] Verify `make ci-local` passes with 100% coverage
 
 ### Phase 2: Next.js Foundation
-- [ ] **Step 1**: Scaffold Next.js app with TypeScript and Tailwind
-  - [ ] Run `create-next-app` with App Router
-  - [ ] Configure Tailwind CSS
-  - [ ] Verify build passes
+- [x] **Step 1**: Scaffold Next.js app with TypeScript and Tailwind ✅
+  - [x] Run `create-next-app` with App Router
+  - [x] Configure Tailwind CSS
+  - [x] Verify build passes
 - [ ] **Step 2**: Add ESLint, Prettier, and base configs
   - [ ] Configure linting rules
   - [ ] Add package.json scripts
